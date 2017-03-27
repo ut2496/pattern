@@ -16,10 +16,10 @@ install:
     - if [ "$TRAVIS_PYTHON_VERSION" == "2.6" ]; then pip install unittest2; fi
     - pip install --upgrade setuptools
     - pip install future
-    - pip install Pillow
+    - pip install Pillow==3.4.2
     - python setup.py install --quiet
     - pip install --quiet pytest-cov
-    - pip install MySQL-python
+    - pip install PyMySQL
 
 script:
     # test_05vector_07slp takes too long (so travis errors the build), it also fails on py2!
