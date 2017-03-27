@@ -14,6 +14,8 @@ matrix:
 
 install:
     - if [ "$TRAVIS_PYTHON_VERSION" == "2.6" ]; then pip install unittest2; fi
+    - pip install --upgrade setuptools
+    - apt-get install libtiff4-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.5-dev tk8.5-dev python-tk
     - pip install future
     - pip install Pillow
     - python setup.py install --quiet
