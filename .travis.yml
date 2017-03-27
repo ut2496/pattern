@@ -17,6 +17,7 @@ install:
     - pip install future
     - python setup.py install --quiet
     - pip install --quiet pytest-cov
+    - pip install MySQL-python
 
 script:
     # test_05vector_07slp takes too long (so travis errors the build), it also fails on py2!
